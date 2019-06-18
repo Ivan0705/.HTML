@@ -1,0 +1,42 @@
+
+.headline {
+    background: white;
+    margin-left: 615px;
+    margin-bottom: -18px;
+    font-family: Cambria, serif;
+}
+
+.button {
+    width:20.5%;
+    height: 30px;
+    background: #378db2;
+    color: white;
+    font-size: 15px;
+    margin-left: 78%;
+    margin-top: 20px;
+    margin-bottom: 14px;
+
+}
+
+.input_text {
+    width: 97%;
+    height: 30px;
+    padding-left: 12px;
+    margin-bottom: 19px;
+    margin-top: 4px;
+}
+
+textarea {
+    width:  97%;
+    height: 100px;
+
+    margin-top: 9px;
+    padding-left: 9px;
+    padding-top: 9px;
+    margin-bottom: 10px;
+}
+
+.font_family {
+    font-family: Arial, serif;
+    color: #868484;
+}
