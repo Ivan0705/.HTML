@@ -9,26 +9,26 @@ body {
     padding: 11px 13px 4px;
     width: 40%;
     background: #feeed6;
-    margin-left: 590px;
-    margin-right: 415px;
-    margin-top: 20px;
-    text-align: justify;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
-header {
-    font-size: 28px;
+.all_content h1 {
+    font-weight: 200;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
-.text_align {
-    margin-right: 521px;
+.text p {
+    text-indent: 15px;
+    line-height: 20px;
 }
+
 
 .content_text {
-    position: page;
-    font-family: Arial, serif;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
-b {
+.all_content b {
     color: #378db2;
     font-family: Arial, serif;
 }
@@ -40,18 +40,11 @@ b {
 }
 
 .text {
-    font-family: Arial, serif;
+    text-align: justify;
+    line-height: 20px;
 }
 
 .indent {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 9px;
 }
 
-.end {
-    padding-top: 5px;
-}
-
-.left_indent {
-    padding-left: 15px;
-}

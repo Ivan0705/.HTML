@@ -1,0 +1,39 @@
+html {
+    line-height: 2;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 1px;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: overline;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
