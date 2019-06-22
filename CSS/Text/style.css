@@ -1,13 +1,14 @@
 body {
     color: #868484;
     max-height: 100%;
-    min-height: 50%;
-    max-width: 100%;
+    min-height: 80%;
+    min-width: 1200px;
 }
 
 .all_content {
     padding: 11px 13px 4px;
-    width: 40%;
+    width: 60%;
+    height: 400px;
     background: #feeed6;
     font-family: Geneva, Arial, Helvetica, sans-serif;
 }
@@ -22,7 +23,6 @@ body {
     text-indent: 15px;
     line-height: 20px;
 }
-
 
 .content_text {
     font-family: Geneva, Arial, Helvetica, sans-serif;
