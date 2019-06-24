@@ -1,24 +1,31 @@
+body {
+    max-height: 100%;
+    min-height: 80%;
+    max-width: 1200px;
+}
+
 .table_client {
-    border: 2px solid #e5e5e5;
+    border: 1px solid #CCCCC7;
     border-collapse: collapse;
-    width: 650px;
+    width: 65%;
     color: #464646;
     font-weight: 400;
-    font-family: Tahoma, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    line-height: 30px;
 }
 
 .table_client th {
-    border: 2px solid #e5e5e5;
-    height: 45px;
+    border: 1px solid;
     color: white;
     background: #3498db;
     font-weight: 500;
     text-align: left;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 .table_client td {
-    border: 1px solid #e5e5e5;
+    border: 1px solid #CCCCC7;
     padding: 12px;
 }
 
@@ -27,6 +34,5 @@
 }
 
 .table_client tr {
-    background: white;
-    border: 1px solid #e5e5e5;
+    font-size: 1.1em;
 }

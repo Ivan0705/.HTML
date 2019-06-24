@@ -1,17 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 12px;
     color: #868484;
     max-height: 100%;
     min-height: 80%;
-    width: 1350px;
-    margin: 12px;
+    max-width: 1200px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
 .all_content {
-    padding: 11px 13px 4px;
-    width: 60%;
-    height: 570px;
+    padding: 1px 24px 13px;
+    width: 80%;
+    height: 50%;
     background: #feeed6;
-    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
 .all_content h1 {
@@ -20,13 +24,13 @@ body {
     margin-top: 5px;
 }
 
+all_content strong {
+    margin-left: 25px;
+}
+
 .text p {
     text-indent: 15px;
     line-height: 20px;
-}
-
-.content_text {
-    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
 .all_content b {
@@ -35,9 +39,20 @@ body {
 }
 
 .comment {
-    font-family: Arial, serif;
-    font-size: 15px;
-    position: center;
+    width: 99.7%;
+    color: #868484;
+    border: 0 solid #ccc;
+}
+
+div.comment {
+    padding-top: 8px;
+}
+
+input.comment, textarea.comment {
+    width: 100%;
+    padding-bottom: 12px;
+    padding-top: 9px;
+    padding-left: 12px;
 }
 
 .text {
@@ -51,7 +66,7 @@ body {
 
 .headline h1 {
     background: white;
-    margin-left: 12px;
+    margin-left: 24px;
     margin-bottom: -4px;
     font-weight: 100;
     font-family: Tahoma, sans-serif;
@@ -72,30 +87,6 @@ body {
     background: #3498db;
 }
 
-.input_text {
-    width: 96%;
-    height: 12px;
-    padding: 12px;
-    margin-bottom: 19px;
-    margin-top: 4px;
-}
-
-.all_content textarea {
-    width: 790px;
-    min-width: 700px;
-    height: 140px;
-    border: 1px solid #868484;
-    margin-top: 9px;
-    padding-left: 9px;
-    padding-top: 9px;
-    margin-bottom: 10px;
-}
-
-.font_family {
-    font-family: Arial, sans-serif;
-    color: #868484;
-}
-
-.all_content input {
-    border: 1px solid;
+input::placeholder, textarea::placeholder {
+    color: #ccc;
 }
