@@ -23,7 +23,10 @@ b,
 strong {
     font-weight: bolder;
 }
-
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
 sub,
 sup {
     font-size: 75%;
@@ -32,7 +35,3 @@ sup {
     vertical-align: baseline;
 }
 
-pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
-}
