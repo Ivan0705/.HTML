@@ -38,10 +38,10 @@ body {
     font-size: 1.1em;
 }
 
-. table_cell {
-    width: 20%;
-}
-
 .long_th cell {
     width: 40%;
+}
+
+. table_cell {
+    width: 20%;
 }
