@@ -1,22 +1,23 @@
 body {
     max-height: 100%;
-    min-height: 80%;
+    min-height: 50%;
     max-width: 1200px;
 }
 
 .table_client {
     border: 1px solid #CCCCC7;
     border-collapse: collapse;
-    width: 65%;
+    width: 95%;
+    height: 95%;
     color: #464646;
     font-weight: 400;
     font-family: Arial, sans-serif;
-    margin: 10px;
     line-height: 30px;
+    margin: 2.5%;
 }
 
 .table_client th {
-    border: 1px solid;
+    border: 1px solid #CCCCC7;
     color: white;
     background: #3498db;
     font-weight: 500;
@@ -35,4 +36,12 @@ body {
 
 .table_client tr {
     font-size: 1.1em;
+}
+
+. table_cell {
+    width: 20%;
+}
+
+.long_th cell {
+    width: 40%;
 }

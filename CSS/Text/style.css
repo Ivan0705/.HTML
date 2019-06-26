@@ -1,16 +1,16 @@
 body {
     color: #868484;
     max-height: 100%;
-    min-height: 80%;
+    min-height: 100%;
     max-width: 1200px;
     font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
 .all_content {
-    padding: 11px 13px 4px;
-    width: 80%;
+    width: 96%;
     height: 50%;
     background: #feeed6;
+    padding: 11px 2% 4px;
 }
 
 .all_content h1 {
@@ -26,7 +26,6 @@ body {
 
 .all_content b {
     color: #378db2;
-    font-family: Arial, serif;
 }
 
 .comment {
@@ -43,4 +42,3 @@ body {
 .indent {
     padding-top: 9px;
 }
-

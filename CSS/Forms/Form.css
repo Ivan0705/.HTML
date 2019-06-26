@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -89,4 +90,8 @@ input.comment, textarea.comment {
 
 input::placeholder, textarea::placeholder {
     color: #ccc;
+}
+
+textarea {
+    resize: none;
 }

@@ -1,10 +1,9 @@
 html {
-    line-height: 2;
     -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 1px;
+    margin: 0;
 }
 
 main {
