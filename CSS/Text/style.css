@@ -29,7 +29,6 @@ body {
 }
 
 .comment {
-    font-family: Arial, serif;
     font-size: 18px;
     position: center;
 }
@@ -41,4 +40,5 @@ body {
 .text {
     text-align: justify;
     line-height: 20px;
+    margin-top: -9px;
 }
