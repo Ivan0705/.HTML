@@ -18,7 +18,7 @@ function getEven(number) {
     return 0;
 }
 
-empty_array = [];
+var empty_array = [];
 console.log("Пустой массив:" + empty_array);
 
 function getElements(array, number) {
