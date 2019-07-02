@@ -80,7 +80,7 @@ function getMaxCountCitiesInCountry(array) {
 }
 
 var infoCountry = getInfoCountry(countries);
-console.log("Информация о странах: " + infoCountry);
+console.log(infoCountry);
 
 function getInfoCountry(array) {
     function getPopulation(city) {
