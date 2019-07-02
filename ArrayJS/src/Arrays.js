@@ -8,7 +8,7 @@ console.log("Получите подмассив из первых 5 элеме�
 console.log("Получите подмассив из последних 5 элементов:" + listArray.slice(listArray.length - 5));
 var sum = listArray.reduce(function (previousValue, currentValue) {
     return previousValue + getEven(currentValue);
-},0);
+}, 0);
 console.log("Сумма всех чётных чисел: " + sum);
 
 function getEven(number) {
@@ -18,17 +18,18 @@ function getEven(number) {
     return 0;
 }
 
-var empty_array = [];
-console.log("Пустой массив:" + empty_array);
+var emptyArray = [];
+console.log("Пустой массив:" + emptyArray);
 
-function getElements(array, number) {
+function getElements(number) {
+    var newArray = [];
     for (var i = 1; i <= number; i++) {
-        array.push(i);
+        newArray.push(i);
     }
-    return array;
+    return newArray;
 }
 
-var list100 = getElements(empty_array, 100);
+var list100 = getElements(100);
 console.log("Добавление 100 элементов в пустой массив: " + list100);
 
 var evenPow = list100.filter(function (value) {
