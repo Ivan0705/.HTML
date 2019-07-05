@@ -34,7 +34,8 @@ var countries = [
         ]
     },
     {
-        country: "Monaco", cities: [
+        country: "Monaco",
+        cities: [
             {
                 name: "Monaco",
                 population: 38400
@@ -62,27 +63,26 @@ var countries = [
         ]
     }];
 
-var maxCountCitiesInCountry = getMaxCountCitiesInCountry(countries);
-maxCountCitiesInCountry.forEach(function (items) {
-    console.log("Список стран с максимальным количеством городов: " + items);
+var countriesWithMaxCountCities = getCountriesWithMaxCountCities(countries);
+countriesWithMaxCountCities.forEach(function (listCountriesWithMaxCities) {
+    console.log("Список стран с максимальным количеством городов: " + listCountriesWithMaxCities);
 });
 
-function getMaxCountCitiesInCountry(array) {
-    var maxCount = array.reduce(function (prev, current) {
+function getCountriesWithMaxCountCities(arrayCountries) {
+    var maxCount = arrayCountries.reduce(function (prev, current) {
         return Math.max(prev, current.cities.length);
-
     }, 0);
-    return array.filter(function (value) {
+    return arrayCountries.filter(function (value) {
         return value.cities.length === maxCount;
     }).map(function (el) {
         return el.country;
     });
 }
 
-var infoCountry = getInfoCountry(countries);
-console.log(infoCountry);
+var countriesInfo = getCountriesInfo(countries);
+console.log(countriesInfo);
 
-function getInfoCountry(array) {
+function getCountriesInfo(arrayCountries) {
     function getPopulation(city) {
         return city.reduce(function (prev, value) {
             return prev + value.population;
@@ -90,8 +90,8 @@ function getInfoCountry(array) {
     }
 
     var info = {};
-    array.forEach(function (items) {
-        info[items.country] = getPopulation(items.cities);
+    arrayCountries.forEach(function (key) {
+        info[key.country] = getPopulation(key.cities);
     });
     return info;
 }
