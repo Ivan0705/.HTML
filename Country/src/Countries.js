@@ -15,7 +15,7 @@ var countries = [
                 population: 1700000
             },
             {
-                name: "Ryazan",
+                name: "Rostov",
                 population: 550000
             }
         ]
