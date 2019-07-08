@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var fahrenheitResult = document.getElementById("fahrenheitConverter");
         var kelvinResult = document.getElementById("kelvinConverter");
 
-        if (/[^[0-9 .]/.test(celsiusResult) || /^undefined$/.test(celsiusResult)) {
+        if (/-[^[0-9 .]/.test(celsiusResult) && /^ - /.test(celsiusResult) || /^undefined$/.test(celsiusResult)) {
             alert("Нужно вводить только цифры!");
         } else {
             kelvinResult.innerHTML = "Результат перевода по Кельвину: " + (celsiusResult * 1 + 273.15);
