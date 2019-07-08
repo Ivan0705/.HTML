@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     var convertButton = document.querySelector(".converter");
-
     /*   var enterValue = document.getElementById("celsiusTemperature");
        enterValue.value = " ";
        function isEmpty(str) {
