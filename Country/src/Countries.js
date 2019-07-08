@@ -1,6 +1,6 @@
 var countries = [
     {
-        country: "Russia,",
+        country: "Russia",
         cities: [
             {
                 name: "Moscow",
@@ -39,7 +39,8 @@ var countries = [
             {
                 name: "Monaco",
                 population: 38400
-            }]
+            }
+        ]
     },
     {
         country: "Germany",
@@ -63,17 +64,18 @@ var countries = [
         ]
     }];
 
-var countriesWithMaxCountCities = getCountriesWithMaxCountCities(countries);
-countriesWithMaxCountCities.forEach(function (listCountriesWithMaxCities) {
+var countriesWithMaxCitiesCount = getCountriesWithMaxCitiesCount(countries);
+countriesWithMaxCitiesCount.forEach(function (listCountriesWithMaxCities) {
     console.log("Список стран с максимальным количеством городов: " + listCountriesWithMaxCities);
 });
 
-function getCountriesWithMaxCountCities(arrayCountries) {
+function getCountriesWithMaxCitiesCount(arrayCountries) {
     var maxCount = arrayCountries.reduce(function (prev, current) {
         return Math.max(prev, current.cities.length);
     }, 0);
-    return arrayCountries.filter(function (value) {
-        return value.cities.length === maxCount;
+
+    return arrayCountries.filter(function (country) {
+        return country.cities.length === maxCount;
     }).map(function (el) {
         return el.country;
     });
@@ -84,14 +86,14 @@ console.log(countriesInfo);
 
 function getCountriesInfo(arrayCountries) {
     function getPopulation(city) {
-        return city.reduce(function (prev, value) {
-            return prev + value.population;
+        return city.reduce(function (prev, country) {
+            return prev + country.population;
         }, 0);
     }
 
     var info = {};
-    arrayCountries.forEach(function (key) {
-        info[key.country] = getPopulation(key.cities);
+    arrayCountries.forEach(function (nameCountry) {
+        info[nameCountry.country] = getPopulation(nameCountry.cities);
     });
     return info;
 }
