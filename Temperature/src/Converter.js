@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var celsiusResult = document.getElementById("celsiusTemperature").value;
         var fahrenheitResult = document.getElementById("fahrenheitConverter");
         var kelvinResult = document.getElementById("kelvinConverter");
+
         if (/[^[0-9 .]/.test(celsiusResult) || /^undefined$/.test(celsiusResult)) {
             alert("Нужно вводить только цифры!");
         } else {
