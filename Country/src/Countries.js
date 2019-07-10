@@ -86,14 +86,14 @@ console.log(countriesInfo);
 
 function getCountriesInfo(arrayCountries) {
     function getPopulation(city) {
-        return city.reduce(function (prev, country) {
-            return prev + country.population;
+        return city.reduce(function (prev, value) {
+            return prev + value.population;
         }, 0);
     }
 
     var info = {};
-    arrayCountries.forEach(function (nameCountry) {
-        info[nameCountry.country] = getPopulation(nameCountry.cities);
+    arrayCountries.forEach(function (item) {
+        info[item.country] = getPopulation(item.cities);
     });
     return info;
 }
