@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isNaN(celsiusResult)) {
             alert("Нужно вводить только цифры!");
         } else {
-            function getKelvin(celsiusResult) {
-                return "Результат перевода по Кельвину: " + (celsiusResult + 273.15);
+            function getKelvin(number) {
+                return "Результат перевода по Кельвину: " + (number + 273.15);
             }
 
             kelvinResult.innerHTML = getKelvin(celsiusResult);
 
-            function getFahrenheit(celsiusResult) {
-                return "Результат перевода по Фаренгейту: " + (celsiusResult * 1.8 + 32);
+            function getFahrenheit(number) {
+                return "Результат перевода по Фаренгейту: " + (number * 1.8 + 32);
             }
 
             fahrenheitResult.innerHTML = getFahrenheit(celsiusResult);
