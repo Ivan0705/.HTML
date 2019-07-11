@@ -84,16 +84,16 @@ function getCountriesWithMaxCitiesCount(arrayCountries) {
 var countriesInfo = getCountriesInfo(countries);
 console.log(countriesInfo);
 
-function getCountriesInfo(arrayCountries) {
-    function getPopulation(city) {
-        return city.reduce(function (prev, value) {
-            return prev + value.population;
+function getCountriesInfo(countries) {
+    function getPopulation(cities) {
+        return cities.reduce(function (prev, city) {
+            return prev + city.population;
         }, 0);
     }
 
     var info = {};
-    arrayCountries.forEach(function (item) {
-        info[item.country] = getPopulation(item.cities);
+    countries.forEach(function (country) {
+        info[country.country] = getPopulation(country.cities);
     });
     return info;
 }
