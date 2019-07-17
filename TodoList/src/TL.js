@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Вы ничего не ввели!");
             return;
         }
+
         var li = document.createElement("li");
         li.innerHTML = "<span></span><button type='button'>X</button>";
 
