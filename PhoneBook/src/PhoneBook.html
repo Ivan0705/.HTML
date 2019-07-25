@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Телефонная книга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form>
+    <label>
+        <input type="text" id="new-surname" placeholder="Введите фамилию!">
+    </label><label>
+    <input type="text" id="new-name" placeholder="Введите имя!">
+</label>
+    <label>
+        <input type="text" id="new-number-phone" placeholder="Введите номер телефона!">
+    </label>
+    <button type="button" id="add">add</button>
+</form>
+
+<table class="phoneTable" id="table1" style="display: none">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Номер телефона</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="tbody1"></tbody>
+</table>
+<script src="jquery-3.4.1.js"></script>
+<script src="PhoneBook.js"></script>
+</body>
+</html>

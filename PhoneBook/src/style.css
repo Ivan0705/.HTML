@@ -1,0 +1,8 @@
+.phoneTable {
+   border: black 1px solid;
+margin-top: 20px;
+}
+
+.phoneTable th, .phoneTable td {
+    border: forestgreen 1px solid;
+}
