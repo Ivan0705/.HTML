@@ -11,7 +11,7 @@ $(document).ready(function () {
         tbody.html("");
         for (var i = 0; i < people.length; i++) {
             var numberItem = i + 1;
-            table.append("<tr><td>" + numberItem + "</td><td>" + people[i].surname + "</td><td>" + people[i].name + "</td><td>" + people[i].numberPhone + "</td><td> <button  >X</button></td></tr>");
+            table.append("<tr><td>" + numberItem + "</td><td>" + people[i].surname + "</td><td>" + people[i].name + "</td><td>" + people[i].numberPhone + "</td><td> <button type='button'>X</button></td></tr>");
         }
     }
 
