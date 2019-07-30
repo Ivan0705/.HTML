@@ -49,7 +49,7 @@ $(document).ready(function () {
         newNumberPhone.val("");
     });
 
-    table.click(function deletePerson(event) {
+    table.click(function (event) {
         var element = event.target.closest("tr");
         var elementToIndex = table.find("tr").index(element);
         people.splice(elementToIndex - 1, 1);
