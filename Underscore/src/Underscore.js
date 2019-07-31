@@ -11,7 +11,6 @@ var filteredPeople = _.chain(people)
     })
     .sortBy("age")
     .value();
-
 console.log("Список людей в возрасте от 20 до 30 лет после сортировки по возрастанию: ", filteredPeople);
 
 var sumAge = _.chain(people)
