@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    var table = $('#table1');
-    var tbody = $("#tbody1");
+    var table = $('#table');
+    var tbody = $("#tbody");
     var $button = $('#add');
     var newSurname = $("#new-surname");
     var newName = $("#new-name");
@@ -9,10 +9,16 @@ $(document).ready(function () {
 
     function buildTr() {
         tbody.html("");
-        for (var i = 0; i < people.length; i++) {
-            var numberItem = i + 1;
-            table.append("<tr><td>" + numberItem + "</td><td>" + people[i].surname + "</td><td>" + people[i].name + "</td><td>" + people[i].numberPhone + "</td><td> <button type='button'>X</button></td></tr>");
-        }
+        $.each(people, function (index) {
+            var numberItem = index + 1;
+            var tr = $("<tr>");
+            tr.append("<td></td><td></td><td></td><td></td><td> <button type='button'>X</button></td>");
+            tr.children().eq(0).text(numberItem);
+            tr.children().eq(1).text(people[index].surname);
+            tr.children().eq(2).text(people[index].name);
+            tr.children().eq(3).text(people[index].numberPhone);
+            table.append(tr);
+        });
     }
 
     $button.click(function () {
