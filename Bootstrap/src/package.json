@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/Ivan0705/.HTML#readme",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
-
   }
 }
