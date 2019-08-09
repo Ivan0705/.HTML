@@ -18,7 +18,6 @@ var avgAge = _.chain(people)
         return val + p.age
     }, 0)
     .value() / people.length;
-
 console.log("Средний возраст всех людей в этом списке: " + avgAge);
 
 var newListPeople = _.chain(people)
