@@ -29,8 +29,8 @@
         <div class="row">
             <div class="col-4">
                 <ul>
-                    <li v-for="todo in todos"><span v-text="todo.title"></span>
-                        <button @click="removeTodo(todo)" class="btn badge-danger">X</button>
+                    <li v-for="item in items"><span v-text="item.title"></span>
+                        <button @click="removeTodo(item)" class="btn badge-danger">X</button>
                     </li>
                 </ul>
             </div>

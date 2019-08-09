@@ -2,7 +2,7 @@ var app = new Vue({
     el: "#app",
     data: {
         title: "TodoList",
-        todos: [],
+        items: [],
         newTodo: ""
     },
     methods: {
@@ -10,12 +10,12 @@ var app = new Vue({
             if (this.newTodo === "") {
                 return alert("Вы ничего не ввели!");
             }
-            this.todos.push({title: this.newTodo});
+            this.items.push({title: this.newTodo});
             this.newTodo = '';
         },
-        removeTodo: function (todo) {
-            var index = this.todos.indexOf(todo);
-            this.todos.splice(index, 1)
+        removeTodo: function (item) {
+            var index = this.items.indexOf(item);
+            this.items.splice(index, 1)
         }
     }
 });
