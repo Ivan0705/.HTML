@@ -25,4 +25,4 @@ var newListPeople = _.chain(people)
             return _.extend({fullName: p.name + " " + p.lastName}, p)
         }
     ).value();
-console.log("Список новых людей: ", newListPeople);
+console.log("Новый писок людей: ", newListPeople);
