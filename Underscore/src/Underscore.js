@@ -28,33 +28,17 @@ console.log("Новый список людей: ", newListPeople);
 var list = [];
 people.forEach(function (p) {
     list[p.name] = {fullName: p.name + " " + p.lastName, name: p.name, lastName: p.lastName, age: p.age};
-
-}, 0);
+});
 console.log(list);
 
 var newField = _.map(people, function (p) {
     return {fullName: p.name + " " + p.lastName};
 });
 
-let array = [newField, people];
-//a [people]=y;
-//var c = y.concat(a);
-console.log("Список людей: ", array);
-
-
-var listPeople = [];
+var newList = [];
 people.forEach(function (p) {
-    var newList = {fullName: p.name + " " + p.lastName, name: p.name, lastName: p.lastName, age: p.age};
-    listPeople.push(newList)
-
+    var fullName = "fullName: " + p.name + " " + p.lastName;
+    newList[fullName] = {p};
 });
-console.log("Список людей2: ", listPeople);
+console.log("Новый список людей: ", newList);
 
-for (var i = 0; i < people.length; i++) {
-    console.log("asd", {
-        fullName: people[i].name + " " + people[i].lastName,
-        name: people[i].name,
-        lastName: people[i].lastName,
-        age: people[i].age
-    });
-}
