@@ -7,11 +7,12 @@ var app = new Vue({
     },
     methods: {
         addTodo: function () {
-            if (this.newTodo === "") {
-                return alert("Вы ничего не ввели!");
+            if (this.newTodo !== "") {
+                this.items.push({title: this.newTodo});
+                this.newTodo = "";
+            } else {
+                alert("Вы ничего не ввели!");
             }
-            this.items.push({title: this.newTodo});
-            this.newTodo = '';
         },
         removeTodo: function (item) {
             var index = this.items.indexOf(item);

@@ -5,32 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TodoListVue</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="Style.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
     <div class="container">
         <div class="row">
-            <div class="col-4"><h3 v-html="title"></h3></div>
+            <div class="col-sm-8 col-4"><h3 v-html="title"></h3></div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-8 col-4">
                 <form @submit.prevent="addTodo" class="input-group mb-3"><label for="newTodo"></label>
                     <input v-model="newTodo" type="text" id="newTodo" name="newTodo" class="form-control"
                            placeholder="Add task">
-                    <button type="submit" name="button" class="btn  btn-success text-white btn-outline-secondary">Add
-                    </button>
+                    <div>
+                        <button type="submit" name="button" class="btn  btn-success text-white btn-outline-secondary">
+                            Add
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-8  col-4">
                 <ul>
                     <li v-for="item in items"><span v-text="item.title"></span>
-                        <button @click="removeTodo(item)" class="btn badge-danger">X</button>
+                        <button @click="removeTodo(item )" class="btn badge-danger">X</button>
                     </li>
                 </ul>
             </div>

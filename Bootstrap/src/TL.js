@@ -11,7 +11,7 @@ $(document).ready(function () {
         }
 
         var li = $("<li>");
-        li.html("<span></span><button  type='button' class='bg-danger text-white'>delete</button>");
+        li.html("<span></span><button type='button' class='btn btn-danger'>X</button>");
         li.children().eq(0).text(newText);
         li.children().eq(1).click(function () {
             li.remove();

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="Style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TodoList</title>
@@ -9,24 +10,24 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-4"><h1>Todo List</h1></div>
+        <div class="col-sm-8 col-4"><h1>Todo List</h1></div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-4">
+        <div class="col-sm-8  col-4">
             <form>
-                <label for="Todo-NewText"> <input type="text" id="Todo-NewText" class="form-control">
+                <label for="Todo-NewText">
+                    <input type="text" name="newTodo" class="form-control" placeholder="Add task" id="Todo-NewText">
                 </label>
-                <button type="button" id="Add-Button"
-                        class=" button bg-success btn-outline-secondary text-white ">Add
-                </button>
+                <button type="button" class="btn btn-success" id="Add-Button">Add</button>
+
             </form>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-8 col-4">
                 <ul id="Todo-Text"></ul>
             </div>
         </div>
