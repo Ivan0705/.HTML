@@ -25,20 +25,9 @@ var newListPeople = _.chain(people)
     .value();
 console.log("Новый список людей: ", newListPeople);
 
-var list = [];
-people.forEach(function (p) {
-    list[p.name] = {fullName: p.name + " " + p.lastName, name: p.name, lastName: p.lastName, age: p.age};
-});
-console.log(list);
-
-var newField = _.map(people, function (p) {
-    return {fullName: p.name + " " + p.lastName};
-});
-
 var newList = [];
 people.forEach(function (p) {
-    var fullName = "fullName: " + p.name + " " + p.lastName;
-    newList[fullName] = {p};
+    p.fullName = p.name + " " + p.lastName;
+    newList.push(p);
 });
 console.log("Новый список людей: ", newList);
-
