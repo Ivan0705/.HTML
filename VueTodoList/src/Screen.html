@@ -11,12 +11,12 @@
 <div id="app">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-12"><h3 v-html="title"></h3></div>
+            <div class="col-12"><h3 v-html="title"></h3></div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-12">
+            <div class="col-12">
                 <form @submit.prevent="addTodo" class="input-group mb-3"><label for="newTodo"></label>
                     <input v-model="newTodo" type="text" id="newTodo" name="newTodo" class="form-control"
                            placeholder="Add task">
@@ -32,7 +32,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12  col-12">
+            <div class="col-12">
                 <ul>
                     <li v-for="item in items"><span v-text="item.title"></span>
                         <button @click="removeTodo(item)" class="btn badge-danger">X</button>
