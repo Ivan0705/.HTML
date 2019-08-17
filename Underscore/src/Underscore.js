@@ -25,9 +25,7 @@ var newListPeople = _.chain(people)
     .value();
 console.log("Новый список людей: ", newListPeople);
 
-var newList = [];
 people.forEach(function (p) {
     p.fullName = p.name + " " + p.lastName;
-    newList.push(p);
 });
-console.log("Новый список людей: ", newList);
+console.log("Новый список людей: ", people);
