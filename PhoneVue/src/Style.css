@@ -1,8 +1,17 @@
-.button {
-    margin-left: 4px;
-    margin-bottom: 4px;
+.addButton {
+    margin-left: 3%;
+    margin-bottom: 5px;
+    height: 38px;
 }
 
-.table {
-    margin-top: 5px
+.enterField1 {
+    margin-left: 5%;
+}
+
+.enterField2 {
+    margin-left: 10%;
+}
+
+.contactTable {
+    margin-top: 12px;
 }
