@@ -21,7 +21,6 @@ var app = new Vue({
             } else {
                 alert("Вы ничего не ввели!");
             }
-
         }, remove: function (index) {
             var indexToElement = this.contacts.indexOf(index);
             this.contacts.splice(index, 1);
