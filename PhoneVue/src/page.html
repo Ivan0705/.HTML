@@ -19,16 +19,16 @@
             <div class="col-6 col-sm-12">
                 <form @submit.prevent="addTodo" class="form-inline mb-4">
                     <label>
-                        <input type="text" v-model="name" id="name" placeholder="Имя*"
+                        <input type="text" v-model="name" id="name" placeholder="Имя *"
                                class="form-control  mr-sm-2">
                     </label>
                     <label>
-                        <input type="text" v-model="lastName" id="lastName" placeholder="Фамилия*"
+                        <input type="text" v-model="lastName" id="lastName" placeholder="Фамилия *"
                                class="form-control  mr-sm-2">
                     </label>
                     <label>
                         <input type="text" v-model="numberPhone" id="numberPhone"
-                               placeholder="Номер телефона*" class="form-control mr-sm-2">
+                               placeholder="Номер телефона *" class="form-control mr-sm-2">
                     </label>
                     <div>
                         <button type="submit" class="btn btn-success mr-sm-2  addButton">Добавить</button>
@@ -52,7 +52,7 @@
                     </thead>
                     <tbody>
                     <tr v-for="(person, index) in contacts">
-                        <td v-text="index+1+'.'"></td>
+                        <td v-text="index + 1 + '.'"></td>
                         <td><span v-text="person.name"></span></td>
                         <td><span v-text="person.lastName"></span></td>
                         <td><span v-text="person.numberPhone"></span></td>
