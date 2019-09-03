@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 var contacts = [];
 var id = 1;
 
@@ -32,12 +33,12 @@ router.post("/deleteContact", function (req, res) {
     res.send({
         success: true,
         message: null
-
     })
 });
 
 /* GET home page. */
 router.get('/', function (req, res) {
+    /*call model*/
     res.render('index');
 });
 

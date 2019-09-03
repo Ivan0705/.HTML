@@ -1,14 +1,20 @@
-function post(url, data) {
-    return $.post({
-        url: url,
-        data: JSON.stringify(data),
-        contentType: "application/JSON"
-    });
-}
-
-function get(url, data) {
-    return $.get(url, data);
-}
+var service = new Vue({
+        el: "",
+        data: {},
+        methods: {
+            post(url, data) {
+                return $.post({
+                    url: url,
+                    data: JSON.stringify(data),
+                    contentType: "application/json"
+                });
+            },
+            get(url, data) {
+                return $.get(url, data);
+            }
+        }
+    }
+);
 
 new Vue({
     el: "#app",
@@ -23,7 +29,8 @@ new Vue({
     }, methods: {
         addContact: function () {
             if (this.name === "" || this.surname === "" || this.phone === "") {
-                return alert("Вы ничего не ввели!");
+                alert("Вы ничего не ввели!");
+                return;
             }
             var self = this;
             var data = {
@@ -31,9 +38,10 @@ new Vue({
                 surname: this.surname,
                 phone: this.phone
             };
-            post("/addContact", data).done(function (response) {
+            service.post("/addContact", data).done(function (response) {
                 if (!response.success) {
-                    return alert(response.message);
+                    alert(response.message);
+                    return;
                 }
                 self.name = "";
                 self.surname = "";
@@ -41,25 +49,27 @@ new Vue({
                 self.loadData();
 
             });
-        }, deleteContact: function (c) {
+        },
+        deleteContact: function (c) {
             var self = this;
             var data = {id: c.id};
-            post("/deleteContact", data).done(function (response) {
+            service.post("/deleteContact", data).done(function (response) {
                 if (!response.success) {
-                    return alert(response.message);
+                    alert(response.message);
+                    return;
                 }
                 self.loadData();
             });
-        }, loadData: function () {
+        },
+        loadData: function () {
             var self = this;
             var data = {term: this.term};
-            get("/getContacts", data).done(function (contacts) {
+            service.get("/getContacts", data).done(function (contacts) {
                 self.contacts = contacts;
             });
-        }, search: function () {
-            var self = this;
+        },
+        search: function () {
             this.loadData();
-            self.term = "";
         }
     }
 });
