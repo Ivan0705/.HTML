@@ -47,7 +47,6 @@ new Vue({
                 self.surname = "";
                 self.phone = "";
                 self.loadData();
-
             });
         },
         deleteContact: function (c) {
