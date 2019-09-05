@@ -7,9 +7,11 @@ define(["jquery", "vue", "phoneBookService", "bootstrap"], function ($, Vue, Pho
             surname: "",
             phone: "",
             term: ""
-        }, created: function () {
+        },
+        created: function () {
             this.loadData();
-        }, methods: {
+        },
+        methods: {
             addContact: function () {
                 if (this.name === "" || this.surname === "" || this.phone === "") {
                     alert("Вы ничего не ввели!");
