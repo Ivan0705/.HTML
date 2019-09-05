@@ -44,9 +44,7 @@ define(["jquery", "vue", "phoneBookService", "bootstrap"], function ($, Vue, Pho
                     self.contacts = contacts;
                 });
             }, search: function () {
-                var self = this;
                 this.loadData();
-                self.term = "";
             }
         }
     });
