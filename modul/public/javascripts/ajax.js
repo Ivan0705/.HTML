@@ -4,7 +4,7 @@ define(["jquery"], function ($) {
             return $.post({
                 url: url,
                 data: JSON.stringify(data),
-                contentType: "application/JSON"
+                contentType: "application/json"
             });
         },
         get: function (url, data) {

@@ -12,7 +12,8 @@ define(["jquery", "vue", "phoneBookService", "bootstrap"], function ($, Vue, Pho
         }, methods: {
             addContact: function () {
                 if (this.name === "" || this.surname === "" || this.phone === "") {
-                    return alert("Вы ничего не ввели!");
+                    alert("Вы ничего не ввели!");
+                    return;
                 }
                 var self = this;
                 var data = {
@@ -22,7 +23,8 @@ define(["jquery", "vue", "phoneBookService", "bootstrap"], function ($, Vue, Pho
                 };
                 PhoneBookService.addContact(data).done(function (response) {
                     if (!response.success) {
-                        return alert(response.message);
+                        alert(response.message);
+                        return;
                     }
                     self.name = "";
                     self.surname = "";
@@ -30,15 +32,18 @@ define(["jquery", "vue", "phoneBookService", "bootstrap"], function ($, Vue, Pho
                     self.loadData();
 
                 });
-            }, deleteContact: function (c) {
+            },
+            deleteContact: function (c) {
                 var self = this;
                 PhoneBookService.deleteContact(c.id).done(function (response) {
                     if (!response.success) {
-                        return alert(response.message);
+                        alert(response.message);
+                        return;
                     }
                     self.loadData();
                 });
-            }, loadData: function () {
+            },
+            loadData: function () {
                 var self = this;
                 PhoneBookService.getContacts(this.term).done(function (contacts) {
                     self.contacts = contacts;

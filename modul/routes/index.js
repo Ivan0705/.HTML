@@ -32,7 +32,6 @@ router.post("/deleteContact", function (req, res) {
     res.send({
         success: true,
         message: null
-
     })
 });
 /* GET home page. */
