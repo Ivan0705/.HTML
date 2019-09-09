@@ -1,21 +1,3 @@
-var service = new Vue({
-        el: "",
-        data: {},
-        methods: {
-            post(url, data) {
-                return $.post({
-                    url: url,
-                    data: JSON.stringify(data),
-                    contentType: "application/json"
-                });
-            },
-            get(url, data) {
-                return $.get(url, data);
-            }
-        }
-    }
-);
-
 new Vue({
     el: "#app",
     data: {
@@ -29,6 +11,16 @@ new Vue({
         this.loadData();
     },
     methods: {
+        post: function (url, data) {
+            return $.post({
+                url: url,
+                data: JSON.stringify(data),
+                contentType: "application/json"
+            });
+        },
+        get: function (url, data) {
+            return $.get(url, data);
+        },
         addContact: function () {
             if (this.name === "" || this.surname === "" || this.phone === "") {
                 alert("Вы ничего не ввели!");
@@ -40,7 +32,7 @@ new Vue({
                 surname: this.surname,
                 phone: this.phone
             };
-            service.post("/addContact", data).done(function (response) {
+            this.post("/addContact", data).done(function (response) {
                 if (!response.success) {
                     alert(response.message);
                     return;
@@ -54,7 +46,7 @@ new Vue({
         deleteContact: function (c) {
             var self = this;
             var data = {id: c.id};
-            service.post("/deleteContact", data).done(function (response) {
+            this.post("/deleteContact", data).done(function (response) {
                 if (!response.success) {
                     alert(response.message);
                     return;
@@ -65,10 +57,11 @@ new Vue({
         loadData: function () {
             var self = this;
             var data = {term: this.term};
-            service.get("/getContacts", data).done(function (contacts) {
+            this.get("/getContacts", data).done(function (contacts) {
                 self.contacts = contacts;
             });
-        },
+        }
+        ,
         search: function () {
             this.loadData();
         }
