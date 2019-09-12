@@ -1,0 +1,17 @@
+$none: none;
+[v-cloack] {
+  display: $none;
+}
+
+$padding: 50px;
+$fontBody: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+body {
+  padding: $padding;
+  font: $fontBody;
+}
+
+$aquaColor: #00B7FF;
+a {
+  color: $aquaColor;
+}
